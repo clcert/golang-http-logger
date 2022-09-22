@@ -99,6 +99,7 @@ type loggerHanlder struct {
 
 func (rh loggerHanlder) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 	rl := &responseLogger{rw: res, start: time.Now()}
+
 	rh.h.ServeHTTP(rl, req)
 
 	if strings.Contains(req.RequestURI, "/beacon/2.0") {

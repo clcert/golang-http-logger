@@ -4,10 +4,13 @@
 
 HTTP logger middleware for Go
 
+## Modifications
+A little change has been made, filtering the log of static requests.
+
 ## Installation
 
 ```sh
-go get -u github.com/go-http-utils/logger
+go get -u github.com/clcert/golang-http-logger
 ```
 
 ## Documentation
@@ -21,7 +24,7 @@ import (
   "net/http"
   "os"
 
-  "github.com/go-http-utils/logger"
+  "github.com/clcert/golang-http-logger"
 )
 
 mux := http.NewServeMux()
